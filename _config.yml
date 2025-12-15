@@ -1,115 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# -----------------------
+# 1. 사이트 기본 정보
+# -----------------------
+title: "DevLog. Embedded & Data"
+name: "User Name"
+description: "데이터의 생성(IoT)부터 분석까지. 꾸준히 성장하는 엔지니어의 기록입니다."
+url: "https://본인아이디.github.io"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
-search: true
+# -----------------------
+# 2. 테마 및 스킨 (Contrast 선택)
+# -----------------------
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "contrast" # 대비가 강한 깔끔한 테마
 
-# Build settings
-markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-include:
-  - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
+# -----------------------
+# 3. 사이드바 프로필
+# -----------------------
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "User Name"
+  avatar : "/assets/images/profile.jpg"
+  bio    : "Firmware, Sensors, and Data Pipelines."
+  location : "Korea"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Email"
+      url: "mailto:your-email@example.com"
+      icon: "fas fa-fw fa-envelope-square"
     - label: "GitHub"
+      url: "https://github.com/본인아이디"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "LinkedIn"
+      url: "https://linkedin.com/in/본인아이디"
+      icon: "fab fa-fw fa-linkedin"
 
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+# -----------------------
+# 4. 프로젝트 컬렉션 활성화 (중요!)
+# -----------------------
+# 토이 프로젝트들을 일반 글(Post)과 분리하여 멋지게 보여주기 위함
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# -----------------------
+# 5. 댓글 (Giscus)
+# -----------------------
+provider: "giscus"
+giscus:
+  repo_id: "..." # 추후 Giscus 설정 후 입력
+  category_name: "General"
