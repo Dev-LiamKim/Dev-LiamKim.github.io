@@ -1,9 +1,12 @@
 main:
-  - title: "Posts"
-    url: /posts/
+  - title: "About Me"
+    url: "/about/"   # 상세 이력서 페이지
+  
+  - title: "Toy Projects"
+    url: "/portfolio/" # 프로젝트 갤러리
+
+  - title: "DevLog (TIL)"
+    url: "/year-archive/" # 공부 기록 (연도별 아카이브)
+  
   - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+    url: "/categories/" # 기술 스택별 분류 (C++, Python, AWS 등)
