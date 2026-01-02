@@ -47,3 +47,12 @@ provider: "giscus"
 giscus:
   repo_id: "..." # 추후 Giscus 설정 후 입력
   category_name: "General"
+
+# _config.yml 파일 하단 또는 중간의 plugins 섹션
+plugins:
+  - jekyll-include-cache
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache # 이 줄이 반드시 포함되어야 합니다.
